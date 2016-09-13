@@ -14,10 +14,18 @@ namespace ConsoleApplication1
         static void Main(string[] args)
         {
             NumberChanger nc1 = new NumberChanger(AddNum);
+            NumberChanger nc2 = new NumberChanger(AddNum2);
+            nc1 += nc2;
+            nc1(5);
             Console.WriteLine(getNum());
         }
 
         public static int AddNum(int v)
+        {
+            return num += v;
+        }
+        
+        public static int AddNum2(int v)
         {
             return num += v;
         }
